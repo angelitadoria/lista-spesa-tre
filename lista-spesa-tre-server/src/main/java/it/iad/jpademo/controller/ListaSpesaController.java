@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin("*")
 @RestController
-public class DemoController {
+public class ListaSpesaController {
 
     @Autowired
     private DemoService demoService;
@@ -17,5 +17,10 @@ public class DemoController {
     public void demo() {
         System.out.println("Siamo nel controller demo");
         demoService.demo();
+    }
+    
+    @RequestMapping("/add")
+    public void add() {
+        
     }
 }
