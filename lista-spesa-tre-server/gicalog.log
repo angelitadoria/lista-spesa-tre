@@ -1,101 +1,553 @@
-2021-03-01 17:32:30.689 DEBUG 9708 --- [main] org.hibernate.SQL                        : create table persona (id bigint not null, cognome varchar(255), data_nascita date, nome varchar(255), primary key (id)) engine=InnoDB
-2021-03-01 17:32:31.154  WARN 9708 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-01 17:33:18.980  WARN 16412 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-01 17:33:56.932  WARN 23536 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-01 17:34:38.924  WARN 11508 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-01 17:35:05.571 DEBUG 11508 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select persona0_.id as id1_0_, persona0_.cognome as cognome2_0_, persona0_.data_nascita as data_nas3_0_, persona0_.nome as nome4_0_ from persona persona0_
-2021-03-01 17:36:06.731 DEBUG 18840 --- [main] org.hibernate.SQL                        : create table hibernate_sequence (next_val bigint) engine=InnoDB
-2021-03-01 17:36:06.793 DEBUG 18840 --- [main] org.hibernate.SQL                        : insert into hibernate_sequence values ( 1 )
-2021-03-01 17:36:06.872 DEBUG 18840 --- [main] org.hibernate.SQL                        : create table persona (id bigint not null, cognome varchar(255), data_nascita date, nome varchar(255), primary key (id)) engine=InnoDB
-2021-03-01 17:36:07.327  WARN 18840 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-01 17:37:00.875 DEBUG 18840 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select persona0_.id as id1_0_, persona0_.cognome as cognome2_0_, persona0_.data_nascita as data_nas3_0_, persona0_.nome as nome4_0_ from persona persona0_
-2021-03-01 17:39:05.990  WARN 23108 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-01 17:39:13.862 DEBUG 23108 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select persona0_.id as id1_0_, persona0_.cognome as cognome2_0_, persona0_.data_nascita as data_nas3_0_, persona0_.nome as nome4_0_ from persona persona0_
-2021-03-01 17:39:13.889 DEBUG 23108 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
-2021-03-01 17:39:13.891 DEBUG 23108 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
-2021-03-01 17:39:13.912 DEBUG 23108 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into persona (cognome, data_nascita, nome, id) values (?, ?, ?, ?)
-2021-03-01 17:39:13.914 TRACE 23108 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Rossi]
-2021-03-01 17:39:13.915 TRACE 23108 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DATE] - [2021-03-01]
-2021-03-01 17:39:13.917 TRACE 23108 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
-2021-03-01 17:39:13.918 TRACE 23108 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [1]
-2021-03-01 17:39:13.923 DEBUG 23108 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
-2021-03-01 17:39:13.924 DEBUG 23108 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
-2021-03-01 17:39:13.928 DEBUG 23108 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into persona (cognome, data_nascita, nome, id) values (?, ?, ?, ?)
-2021-03-01 17:39:13.928 TRACE 23108 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Bianchi]
-2021-03-01 17:39:13.929 TRACE 23108 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DATE] - [2011-03-01]
-2021-03-01 17:39:13.929 TRACE 23108 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Antonio]
-2021-03-01 17:39:13.929 TRACE 23108 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [2]
-2021-03-01 17:41:16.367  WARN 1084 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-01 17:41:20.787 DEBUG 1084 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from persona
-2021-03-01 17:41:20.817 DEBUG 1084 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
-2021-03-01 17:41:20.819 DEBUG 1084 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
-2021-03-01 17:41:20.839 DEBUG 1084 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into persona (cognome, data_nascita, nome, id) values (?, ?, ?, ?)
-2021-03-01 17:41:20.844 TRACE 1084 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Rossi]
-2021-03-01 17:41:20.845 TRACE 1084 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DATE] - [2021-03-01]
-2021-03-01 17:41:20.848 TRACE 1084 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
-2021-03-01 17:41:20.850 TRACE 1084 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [3]
-2021-03-01 17:41:20.857 DEBUG 1084 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
-2021-03-01 17:41:20.859 DEBUG 1084 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
-2021-03-01 17:41:20.864 DEBUG 1084 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into persona (cognome, data_nascita, nome, id) values (?, ?, ?, ?)
-2021-03-01 17:41:20.864 TRACE 1084 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Bianchi]
-2021-03-01 17:41:20.864 TRACE 1084 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DATE] - [2011-03-01]
-2021-03-01 17:41:20.865 TRACE 1084 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Antonio]
-2021-03-01 17:41:20.865 TRACE 1084 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [4]
-2021-03-01 17:44:10.209  WARN 6116 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-01 17:44:14.590 DEBUG 6116 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from persona
-2021-03-01 17:44:14.621 DEBUG 6116 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
-2021-03-01 17:44:14.623 DEBUG 6116 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
-2021-03-01 17:44:14.656 DEBUG 6116 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into persona (cognome, data_nascita, nome, id) values (?, ?, ?, ?)
-2021-03-01 17:44:14.660 TRACE 6116 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Rossi]
-2021-03-01 17:44:14.662 TRACE 6116 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DATE] - [2021-03-01]
-2021-03-01 17:44:14.666 TRACE 6116 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
-2021-03-01 17:44:14.668 TRACE 6116 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [5]
-2021-03-01 17:44:14.681 DEBUG 6116 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
-2021-03-01 17:44:14.683 DEBUG 6116 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
-2021-03-01 17:44:14.690 DEBUG 6116 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into persona (cognome, data_nascita, nome, id) values (?, ?, ?, ?)
-2021-03-01 17:44:14.692 TRACE 6116 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Bianchi]
-2021-03-01 17:44:14.693 TRACE 6116 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DATE] - [2011-03-01]
-2021-03-01 17:44:14.694 TRACE 6116 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Antonio]
-2021-03-01 17:44:14.695 TRACE 6116 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [6]
-2021-03-01 17:44:14.790 DEBUG 6116 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select persona0_.id as id1_0_, persona0_.cognome as cognome2_0_, persona0_.data_nascita as data_nas3_0_, persona0_.nome as nome4_0_ from persona persona0_
-2021-03-01 17:51:52.440  WARN 13012 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-01 17:52:10.166 DEBUG 13012 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from persona
-2021-03-01 17:52:10.190 DEBUG 13012 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
-2021-03-01 17:52:10.192 DEBUG 13012 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
-2021-03-01 17:52:10.217 DEBUG 13012 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into persona (cognome, data_nascita, nome, id) values (?, ?, ?, ?)
-2021-03-01 17:52:10.219 TRACE 13012 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Rossi]
-2021-03-01 17:52:10.220 TRACE 13012 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DATE] - [2021-03-01]
-2021-03-01 17:52:10.222 TRACE 13012 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
-2021-03-01 17:52:10.222 TRACE 13012 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [7]
-2021-03-01 17:52:10.229 DEBUG 13012 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
-2021-03-01 17:52:10.230 DEBUG 13012 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
-2021-03-01 17:52:10.234 DEBUG 13012 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into persona (cognome, data_nascita, nome, id) values (?, ?, ?, ?)
-2021-03-01 17:52:10.235 TRACE 13012 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Bianchi]
-2021-03-01 17:52:10.236 TRACE 13012 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DATE] - [2011-03-01]
-2021-03-01 17:52:10.236 TRACE 13012 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Antonio]
-2021-03-01 17:52:10.237 TRACE 13012 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [8]
-2021-03-01 17:52:10.281 DEBUG 13012 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select persona0_.id as id1_0_, persona0_.cognome as cognome2_0_, persona0_.data_nascita as data_nas3_0_, persona0_.nome as nome4_0_ from persona persona0_
-2021-03-01 17:53:36.883  WARN 7636 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-01 17:53:45.586 DEBUG 7636 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from persona
-2021-03-01 17:53:45.613 DEBUG 7636 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
-2021-03-01 17:53:45.616 DEBUG 7636 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
-2021-03-01 17:53:45.638 DEBUG 7636 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into persona (cognome, data_nascita, nome, id) values (?, ?, ?, ?)
-2021-03-01 17:53:45.641 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Rossi]
-2021-03-01 17:53:45.642 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DATE] - [2021-03-01]
-2021-03-01 17:53:45.644 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Mario]
-2021-03-01 17:53:45.645 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [9]
-2021-03-01 17:53:45.654 DEBUG 7636 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
-2021-03-01 17:53:45.655 DEBUG 7636 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
-2021-03-01 17:53:45.660 DEBUG 7636 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into persona (cognome, data_nascita, nome, id) values (?, ?, ?, ?)
-2021-03-01 17:53:45.661 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Bianchi]
-2021-03-01 17:53:45.661 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DATE] - [2011-03-01]
-2021-03-01 17:53:45.661 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Antonio]
-2021-03-01 17:53:45.661 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [10]
-2021-03-01 17:53:45.667 DEBUG 7636 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
-2021-03-01 17:53:45.669 DEBUG 7636 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
-2021-03-01 17:53:45.674 DEBUG 7636 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into persona (cognome, data_nascita, nome, id) values (?, ?, ?, ?)
-2021-03-01 17:53:45.674 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Verdi]
-2021-03-01 17:53:45.675 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DATE] - [2001-03-01]
-2021-03-01 17:53:45.675 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elisabetta]
-2021-03-01 17:53:45.675 TRACE 7636 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [11]
-2021-03-01 17:53:45.712 DEBUG 7636 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select persona0_.id as id1_0_, persona0_.cognome as cognome2_0_, persona0_.data_nascita as data_nas3_0_, persona0_.nome as nome4_0_ from persona persona0_
+2021-03-03 09:16:05.522 DEBUG 13244 --- [main] org.hibernate.SQL                        : create table hibernate_sequence (next_val bigint) engine=InnoDB
+2021-03-03 09:16:05.692 DEBUG 13244 --- [main] org.hibernate.SQL                        : insert into hibernate_sequence values ( 1 )
+2021-03-03 09:16:05.712 DEBUG 13244 --- [main] org.hibernate.SQL                        : create table persona (id bigint not null, cognome varchar(255), data_nascita date, nome varchar(255), primary key (id)) engine=InnoDB
+2021-03-03 09:16:05.780 DEBUG 13244 --- [main] org.hibernate.SQL                        : create table prodotto (id integer not null, nome varchar(255), primary key (id)) engine=InnoDB
+2021-03-03 09:16:06.581  WARN 13244 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-03 10:05:30.321  WARN 11812 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-03 10:06:50.044  WARN 12804 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-03 10:10:34.943 DEBUG 12804 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 10:10:34.950 DEBUG 12804 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 10:10:34.984 DEBUG 12804 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 10:10:34.988 TRACE 12804 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pane]
+2021-03-03 10:10:34.988 TRACE 12804 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2021-03-03 10:10:35.092 DEBUG 12804 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 10:10:35.123  WARN 12804 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap'); nested exception is com.fasterxml.jackson.databind.JsonMappingException: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap') (through reference chain: it.iad.dto.DtoList["prodotti"]->java.util.ArrayList[0])]
+2021-03-03 10:16:08.911 DEBUG 12804 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 10:16:08.914 DEBUG 12804 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 10:16:09.989 DEBUG 12804 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 10:16:09.990 TRACE 12804 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pane]
+2021-03-03 10:16:09.990 TRACE 12804 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [2]
+2021-03-03 10:16:10.003 DEBUG 12804 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 10:16:10.026 ERROR 12804 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto] with root cause
+
+org.hibernate.InstantiationException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:85) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:105) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.instantiate(AbstractEntityTuplizer.java:705) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.instantiate(AbstractEntityPersister.java:5209) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1598) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1582) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.instanceNotYetLoaded(Loader.java:1761) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRow(Loader.java:1622) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRowFromResultSet(Loader.java:740) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRowsFromResultSet(Loader.java:1039) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.processResultSet(Loader.java:990) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:959) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2849) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2831) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2663) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2658) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1414) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1625) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1593) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:165) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:356) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:524) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:531) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:156) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:131) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy77.findAll(Unknown Source) ~[na:na]
+	at it.iad.jpademo.service.impl.ListaSpesaServiceImpl.add(ListaSpesaServiceImpl.java:20) ~[classes/:na]
+	at it.iad.jpademo.controller.ListaSpesaController.add(ListaSpesaController.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-03-03 10:17:05.910  WARN 9548 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-03 10:17:39.907  WARN 4676 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-03 10:23:47.417 DEBUG 4676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 10:23:48.461 DEBUG 4676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 10:23:48.508 DEBUG 4676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 10:23:48.513 TRACE 4676 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pasta]
+2021-03-03 10:23:48.515 TRACE 4676 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [3]
+2021-03-03 10:23:48.625 DEBUG 4676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 10:23:48.642 ERROR 4676 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto] with root cause
+
+org.hibernate.InstantiationException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:85) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:105) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.instantiate(AbstractEntityTuplizer.java:705) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.instantiate(AbstractEntityPersister.java:5209) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1598) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1582) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.instanceNotYetLoaded(Loader.java:1761) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRow(Loader.java:1622) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRowFromResultSet(Loader.java:740) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRowsFromResultSet(Loader.java:1039) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.processResultSet(Loader.java:990) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:959) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2849) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2831) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2663) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2658) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1414) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1625) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1593) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:165) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:356) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:524) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:531) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:156) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:131) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy77.findAll(Unknown Source) ~[na:na]
+	at it.iad.jpademo.service.impl.ListaSpesaServiceImpl.add(ListaSpesaServiceImpl.java:20) ~[classes/:na]
+	at it.iad.jpademo.controller.ListaSpesaController.add(ListaSpesaController.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-03-03 10:42:08.626  WARN 4668 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-03 10:43:30.728 DEBUG 4668 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 10:43:30.733 DEBUG 4668 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 10:43:30.775 DEBUG 4668 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 10:43:30.778 TRACE 4668 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pizza]
+2021-03-03 10:43:30.778 TRACE 4668 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [4]
+2021-03-03 10:43:30.887 DEBUG 4668 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 10:43:30.902 ERROR 4668 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto] with root cause
+
+org.hibernate.InstantiationException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:85) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:105) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.instantiate(AbstractEntityTuplizer.java:705) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.instantiate(AbstractEntityPersister.java:5209) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1598) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1582) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.instanceNotYetLoaded(Loader.java:1761) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRow(Loader.java:1622) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRowFromResultSet(Loader.java:740) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRowsFromResultSet(Loader.java:1039) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.processResultSet(Loader.java:990) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:959) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2849) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2831) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2663) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2658) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1414) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1625) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1593) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:165) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:356) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:524) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:531) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:156) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:131) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy77.findAll(Unknown Source) ~[na:na]
+	at it.iad.jpademo.service.impl.ListaSpesaServiceImpl.add(ListaSpesaServiceImpl.java:20) ~[classes/:na]
+	at it.iad.jpademo.controller.ListaSpesaController.add(ListaSpesaController.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-03-03 10:45:34.062  WARN 7192 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-03 10:46:09.142 DEBUG 7192 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 10:46:09.147 DEBUG 7192 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 10:46:10.272 DEBUG 7192 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 10:46:10.274 TRACE 7192 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [yogurt]
+2021-03-03 10:46:10.274 TRACE 7192 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [5]
+2021-03-03 10:46:10.387 DEBUG 7192 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 10:46:10.404 ERROR 7192 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto; nested exception is org.hibernate.InstantiationException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto] with root cause
+
+org.hibernate.InstantiationException: No default constructor for entity:  : it.iad.jpademo.model.Prodotto
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:85) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:105) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.instantiate(AbstractEntityTuplizer.java:705) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.instantiate(AbstractEntityPersister.java:5209) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1598) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1582) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.instanceNotYetLoaded(Loader.java:1761) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRow(Loader.java:1622) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRowFromResultSet(Loader.java:740) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.getRowsFromResultSet(Loader.java:1039) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.processResultSet(Loader.java:990) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:959) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:349) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2849) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2831) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2663) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2658) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1414) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1625) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1593) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:165) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:356) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:524) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:531) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:156) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:131) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy77.findAll(Unknown Source) ~[na:na]
+	at it.iad.jpademo.service.impl.ListaSpesaServiceImpl.add(ListaSpesaServiceImpl.java:20) ~[classes/:na]
+	at it.iad.jpademo.controller.ListaSpesaController.add(ListaSpesaController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-03-03 10:47:41.958  WARN 13676 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-03 10:47:56.445 DEBUG 13676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 10:47:56.450 DEBUG 13676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 10:47:57.550 DEBUG 13676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 10:47:57.552 TRACE 13676 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [vino]
+2021-03-03 10:47:57.553 TRACE 13676 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [6]
+2021-03-03 10:47:57.665 DEBUG 13676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 10:47:57.699  WARN 13676 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap'); nested exception is com.fasterxml.jackson.databind.JsonMappingException: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap') (through reference chain: it.iad.dto.DtoList["prodotti"]->java.util.ArrayList[0])]
+2021-03-03 10:48:01.970  WARN 13676 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public it.iad.dto.DtoList it.iad.jpademo.controller.ListaSpesaController.add(it.iad.dto.DtoProdotto)]
+2021-03-03 10:51:05.551  WARN 9196 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-03 10:51:19.371 DEBUG 9196 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 10:51:19.375 DEBUG 9196 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 10:51:20.482 DEBUG 9196 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 10:51:20.484 TRACE 9196 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [uova]
+2021-03-03 10:51:20.485 TRACE 9196 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [7]
+2021-03-03 10:51:20.633 DEBUG 9196 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 10:51:20.670  WARN 9196 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap'); nested exception is com.fasterxml.jackson.databind.JsonMappingException: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap') (through reference chain: it.iad.dto.DtoList["prodotti"]->java.util.ArrayList[0])]
+2021-03-03 10:56:34.022 DEBUG 9196 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 10:56:34.031 DEBUG 9196 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 10:56:34.045 DEBUG 9196 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 10:56:34.046 TRACE 9196 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pollo]
+2021-03-03 10:56:34.047 TRACE 9196 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [8]
+2021-03-03 10:56:34.066 DEBUG 9196 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 10:56:34.073  WARN 9196 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap'); nested exception is com.fasterxml.jackson.databind.JsonMappingException: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap') (through reference chain: it.iad.dto.DtoList["prodotti"]->java.util.ArrayList[0])]
+2021-03-03 10:58:09.228 DEBUG 9196 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 10:58:09.230 DEBUG 9196 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 10:58:09.248 DEBUG 9196 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 10:58:09.249 TRACE 9196 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [insalata]
+2021-03-03 10:58:09.250 TRACE 9196 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [9]
+2021-03-03 10:58:09.259 DEBUG 9196 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 10:58:09.266  WARN 9196 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap'); nested exception is com.fasterxml.jackson.databind.JsonMappingException: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap') (through reference chain: it.iad.dto.DtoList["prodotti"]->java.util.ArrayList[0])]
+2021-03-03 10:59:47.481 DEBUG 9196 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 10:59:47.482 DEBUG 9196 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 10:59:48.553 DEBUG 9196 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 10:59:48.554 TRACE 9196 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [basilico]
+2021-03-03 10:59:48.555 TRACE 9196 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [10]
+2021-03-03 10:59:48.569 DEBUG 9196 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 10:59:48.572  WARN 9196 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap'); nested exception is com.fasterxml.jackson.databind.JsonMappingException: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap') (through reference chain: it.iad.dto.DtoList["prodotti"]->java.util.ArrayList[0])]
+2021-03-03 11:10:21.300 DEBUG 9196 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 11:10:22.340 DEBUG 9196 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 11:10:22.359 DEBUG 9196 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 11:10:22.360 TRACE 9196 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [aceto]
+2021-03-03 11:10:22.360 TRACE 9196 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [11]
+2021-03-03 11:10:22.373 DEBUG 9196 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 11:10:22.380  WARN 9196 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap'); nested exception is com.fasterxml.jackson.databind.JsonMappingException: class it.iad.jpademo.model.Prodotto cannot be cast to class java.lang.String (it.iad.jpademo.model.Prodotto is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap') (through reference chain: it.iad.dto.DtoList["prodotti"]->java.util.ArrayList[0])]
+2021-03-03 11:10:30.874  WARN 9196 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public it.iad.dto.DtoList it.iad.jpademo.controller.ListaSpesaController.add(it.iad.dto.DtoProdotto)]
+2021-03-03 11:33:33.625  WARN 9972 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-03 11:33:49.843 DEBUG 9972 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 11:33:49.849 DEBUG 9972 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 11:33:50.940 DEBUG 9972 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 11:33:50.942 TRACE 9972 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [olio]
+2021-03-03 11:33:50.943 TRACE 9972 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [12]
+2021-03-03 11:33:51.050 DEBUG 9972 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 11:37:13.429 DEBUG 9972 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 11:37:13.432 DEBUG 9972 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 11:37:13.449 DEBUG 9972 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 11:37:13.450 TRACE 9972 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sdssf]
+2021-03-03 11:37:13.451 TRACE 9972 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [13]
+2021-03-03 11:37:13.463 DEBUG 9972 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 11:39:11.848 DEBUG 9972 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 11:39:11.850 DEBUG 9972 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 11:39:11.872 DEBUG 9972 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 11:39:11.873 TRACE 9972 --- [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pippo]
+2021-03-03 11:39:11.874 TRACE 9972 --- [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [14]
+2021-03-03 11:39:11.891 DEBUG 9972 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-03 11:39:26.685 DEBUG 9972 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-03 11:39:26.693 DEBUG 9972 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-03 11:39:26.706 DEBUG 9972 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-03 11:39:26.706 TRACE 9972 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sale]
+2021-03-03 11:39:26.707 TRACE 9972 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [15]
+2021-03-03 11:39:26.717 DEBUG 9972 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_

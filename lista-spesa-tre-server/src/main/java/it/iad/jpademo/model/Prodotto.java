@@ -15,6 +15,9 @@ public class Prodotto {
     @Column
     private String nome;
 
+    public Prodotto() {
+    }
+
     public Prodotto(String nome) {
         this.nome = nome;
     }
@@ -34,5 +37,12 @@ public class Prodotto {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    @Override
+    public String toString() {
+        return "Prodotto{" + "id=" + id + ", nome=" + nome + '}';
+    }
+    
+    
 
 }

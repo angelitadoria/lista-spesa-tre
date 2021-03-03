@@ -1,5 +1,6 @@
+import { from } from "rxjs";
 import { Dto } from "./dto";
 
 export class DtoLista{
-    lista: string[] = [];
+    prodotti: Dto[] = [];
 }

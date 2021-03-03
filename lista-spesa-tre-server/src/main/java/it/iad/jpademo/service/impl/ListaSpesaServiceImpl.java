@@ -1,8 +1,10 @@
 package it.iad.jpademo.service.impl;
 
 
-import it.iad.jpademo.repository.PersonaRepository;
+import it.iad.jpademo.model.Prodotto;
+import it.iad.jpademo.repository.ListaRepository;
 import it.iad.jpademo.service.ListaSpesaService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,15 +12,18 @@ import org.springframework.stereotype.Service;
 public class ListaSpesaServiceImpl implements ListaSpesaService {
 
     @Autowired
-    PersonaRepository personaRepository;
+    ListaRepository listaRepository;
 
     @Override
-    public void add() {
-       
+    public List<Prodotto> add(Prodotto prodotto) {
+       listaRepository.save(prodotto);
+       return listaRepository.findAll();
     }
     
     @Override
-    public void removeAll(){}
+    public void removeAll(){
+        listaRepository.deleteAll();
+    }
     
     
 }
