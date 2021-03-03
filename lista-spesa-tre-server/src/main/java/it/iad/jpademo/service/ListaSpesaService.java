@@ -6,5 +6,6 @@ import java.util.List;
 public interface ListaSpesaService {
 
     public List<Prodotto> add(Prodotto prodotto);
+
     void removeAll();
 }

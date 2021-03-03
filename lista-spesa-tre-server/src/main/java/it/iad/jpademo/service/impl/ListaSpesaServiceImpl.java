@@ -1,6 +1,5 @@
 package it.iad.jpademo.service.impl;
 
-
 import it.iad.jpademo.model.Prodotto;
 import it.iad.jpademo.repository.ListaRepository;
 import it.iad.jpademo.service.ListaSpesaService;
@@ -16,14 +15,13 @@ public class ListaSpesaServiceImpl implements ListaSpesaService {
 
     @Override
     public List<Prodotto> add(Prodotto prodotto) {
-       listaRepository.save(prodotto);
-       return listaRepository.findAll();
+        listaRepository.save(prodotto);
+        return listaRepository.findAll();
     }
-    
+
     @Override
-    public void removeAll(){
+    public void removeAll() {
         listaRepository.deleteAll();
     }
-    
-    
+
 }
