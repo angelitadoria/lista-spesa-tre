@@ -7,5 +7,5 @@ public interface ListaSpesaService {
 
     public List<Prodotto> add(Prodotto prodotto);
 
-    void removeAll();
+    public List<Prodotto> removeAll();
 }

@@ -1,9 +1,10 @@
 package it.iad.jpademo.controller;
 
+import it.iad.dto.DtoList;
 import it.iad.dto.DtoProdotto;
 import it.iad.jpademo.model.Prodotto;
 import it.iad.jpademo.service.ListaSpesaService;
-import java.util.ArrayList;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,19 +21,18 @@ public class ListaSpesaController {
 
     @RequestMapping("/add")
     @ResponseBody
-    public DtoProdotto add(@RequestBody DtoProdotto dtoProdotto) {
-        System.out.println("Siamo nel controller add");
+    public DtoList add(@RequestBody DtoProdotto dtoProdotto) {
+        System.out.println("Aggiunto nuovo prodotto");
         Prodotto prodotto = new Prodotto(dtoProdotto.getProdotto());
-        ArrayList lista = (ArrayList) listaSpesaService.add(prodotto);
+        List<Prodotto> lista = listaSpesaService.add(prodotto);
         lista.forEach(d -> System.out.println(d.toString()));
-
-        return new DtoProdotto(dtoProdotto.getProdotto());
+        return new DtoList(lista);
 
     }
 
     @RequestMapping("/removeAll")
     public void removeAll() {
-        System.out.println("Siamo nel rimuovi");
+        System.out.println("Lista rimossa");
         listaSpesaService.removeAll();
     }
 

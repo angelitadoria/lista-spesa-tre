@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Dto } from './dto';
 import { DtoLista } from './dto-lista';
+import { Prodotto } from './prodotto';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +12,15 @@ import { DtoLista } from './dto-lista';
 })
 export class AppComponent {
   prodotto: string;
-  prodotti: string[] = [];
+  prodotti: Prodotto[] = [];
 
   constructor(private http: HttpClient) { }
 
   add(){
     let dto: Dto = new Dto();
     dto.prodotto = this.prodotto;
-    let oss: Observable<Dto> = this.http.post<Dto>('http://localhost:8080/add', dto);
-    oss.subscribe(d => this.prodotti.push(d.prodotto));
+    let oss: Observable<DtoLista> = this.http.post<DtoLista>('http://localhost:8080/add', dto);
+    oss.subscribe(d => this.prodotti=d.prodotti);
     this.prodotto = "";
   }
 

@@ -20,8 +20,9 @@ public class ListaSpesaServiceImpl implements ListaSpesaService {
     }
 
     @Override
-    public void removeAll() {
-        listaRepository.deleteAll();
+    public List <Prodotto> removeAll() {
+        listaRepository.deleteAllInBatch();
+        return listaRepository.findAll();
     }
 
 }
