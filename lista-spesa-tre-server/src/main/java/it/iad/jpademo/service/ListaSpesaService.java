@@ -10,4 +10,6 @@ public interface ListaSpesaService {
     public List<Prodotto> removeAll();
     
     public List<Prodotto> displayList();
+    
+    public List<Prodotto> remove(int id);
 }

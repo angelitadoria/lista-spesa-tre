@@ -35,4 +35,11 @@ export class AppComponent {
     let oss: Observable<DtoLista> = this.http.get<DtoLista>('http://localhost:8080/displayList');
     oss.subscribe(d => this.prodotti = d.prodotti);
   }
+
+  remove(i: number){
+    let dto: Dto = new Dto();
+    dto.id = i;
+    let oss: Observable<DtoLista> = this.http.post<DtoLista>('http://localhost:8080/remove', dto);
+    oss.subscribe(d => this.prodotti=d.prodotti);
+  }
 }

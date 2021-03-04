@@ -41,4 +41,11 @@ public class ListaSpesaController {
     public DtoList displayList() {
         return new DtoList(listaSpesaService.displayList());
     }
+    
+    @RequestMapping("/remove")
+    @ResponseBody
+    public DtoList remove(@RequestBody DtoProdotto dtoProdotto) {
+        System.out.println("Rimosso articolo");
+        return new DtoList(listaSpesaService.remove(dtoProdotto.getId()));
+    }
 }

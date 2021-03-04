@@ -16,17 +16,23 @@ public class ListaSpesaServiceImpl implements ListaSpesaService {
     @Override
     public List<Prodotto> add(Prodotto prodotto) {
         listaRepository.save(prodotto);
-        return listaRepository.findAll();
+        return displayList();
     }
 
     @Override
     public List <Prodotto> removeAll() {
         listaRepository.deleteAllInBatch();
-        return listaRepository.findAll();
+        return displayList();
     }
 
     @Override
     public List<Prodotto> displayList() {
         return listaRepository.findAll();
+    }
+
+    @Override
+    public List<Prodotto> remove(int id) {
+        listaRepository.deleteById(id);
+        return displayList();
     }
 }

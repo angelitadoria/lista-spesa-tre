@@ -159,3 +159,275 @@
 2021-03-04 10:47:19.804 DEBUG 481996 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : delete from prodotto
 2021-03-04 10:47:20.015 DEBUG 481996 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
 2021-03-04 10:47:22.075 DEBUG 481996 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:29:41.260  WARN 488676 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-04 11:31:01.806 DEBUG 488676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:31:04.478 DEBUG 488676 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-04 11:31:04.566 DEBUG 488676 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-04 11:31:04.751 DEBUG 488676 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-04 11:31:04.756 TRACE 488676 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pane]
+2021-03-04 11:31:04.759 TRACE 488676 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [8]
+2021-03-04 11:31:04.930 DEBUG 488676 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:31:08.300 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-04 11:31:08.306 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-04 11:31:08.786 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-04 11:31:08.787 TRACE 488676 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [olio]
+2021-03-04 11:31:08.789 TRACE 488676 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [9]
+2021-03-04 11:31:09.829 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:31:12.279 DEBUG 488676 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select prodotto0_.id as id1_1_0_, prodotto0_.nome as nome2_1_0_ from prodotto prodotto0_ where prodotto0_.id=?
+2021-03-04 11:31:12.281 TRACE 488676 --- [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [0]
+2021-03-04 11:31:12.634 ERROR 488676 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.EmptyResultDataAccessException: No class it.iad.jpademo.model.Prodotto entity with id 0 exists!] with root cause
+
+org.springframework.dao.EmptyResultDataAccessException: No class it.iad.jpademo.model.Prodotto entity with id 0 exists!
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.lambda$deleteById$0(SimpleJpaRepository.java:176) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:401) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteById(SimpleJpaRepository.java:175) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:524) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:531) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:156) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:131) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy77.deleteById(Unknown Source) ~[na:na]
+	at it.iad.jpademo.service.impl.ListaSpesaServiceImpl.remove(ListaSpesaServiceImpl.java:35) ~[classes/:na]
+	at it.iad.jpademo.controller.ListaSpesaController.remove(ListaSpesaController.java:49) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-03-04 11:31:34.892 DEBUG 488676 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : delete from prodotto
+2021-03-04 11:31:35.357 DEBUG 488676 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:31:42.937 DEBUG 488676 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-04 11:31:42.940 DEBUG 488676 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-04 11:31:43.456 DEBUG 488676 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-04 11:31:43.458 TRACE 488676 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [olio]
+2021-03-04 11:31:43.459 TRACE 488676 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [10]
+2021-03-04 11:31:43.675 DEBUG 488676 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:31:45.470 DEBUG 488676 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select prodotto0_.id as id1_1_0_, prodotto0_.nome as nome2_1_0_ from prodotto prodotto0_ where prodotto0_.id=?
+2021-03-04 11:31:45.471 TRACE 488676 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [0]
+2021-03-04 11:31:45.477 ERROR 488676 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.EmptyResultDataAccessException: No class it.iad.jpademo.model.Prodotto entity with id 0 exists!] with root cause
+
+org.springframework.dao.EmptyResultDataAccessException: No class it.iad.jpademo.model.Prodotto entity with id 0 exists!
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.lambda$deleteById$0(SimpleJpaRepository.java:176) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:401) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteById(SimpleJpaRepository.java:175) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:524) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:531) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:156) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:131) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.4.5.jar:2.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at com.sun.proxy.$Proxy77.deleteById(Unknown Source) ~[na:na]
+	at it.iad.jpademo.service.impl.ListaSpesaServiceImpl.remove(ListaSpesaServiceImpl.java:35) ~[classes/:na]
+	at it.iad.jpademo.controller.ListaSpesaController.remove(ListaSpesaController.java:49) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-03-04 11:35:48.698 DEBUG 488676 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:35:50.367 DEBUG 488676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select prodotto0_.id as id1_1_0_, prodotto0_.nome as nome2_1_0_ from prodotto prodotto0_ where prodotto0_.id=?
+2021-03-04 11:35:50.368 TRACE 488676 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [10]
+2021-03-04 11:35:50.390 DEBUG 488676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : delete from prodotto where id=?
+2021-03-04 11:35:50.391 TRACE 488676 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [10]
+2021-03-04 11:35:50.639 DEBUG 488676 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:36:04.934 DEBUG 488676 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-04 11:36:04.987 DEBUG 488676 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-04 11:36:05.160 DEBUG 488676 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-04 11:36:05.161 TRACE 488676 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [olio]
+2021-03-04 11:36:05.163 TRACE 488676 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [11]
+2021-03-04 11:36:05.412 DEBUG 488676 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:36:09.409 DEBUG 488676 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select prodotto0_.id as id1_1_0_, prodotto0_.nome as nome2_1_0_ from prodotto prodotto0_ where prodotto0_.id=?
+2021-03-04 11:36:09.410 TRACE 488676 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [11]
+2021-03-04 11:36:09.413 DEBUG 488676 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : delete from prodotto where id=?
+2021-03-04 11:36:09.414 TRACE 488676 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [11]
+2021-03-04 11:36:09.924 DEBUG 488676 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:36:37.922 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-04 11:36:37.925 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-04 11:36:38.073 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-04 11:36:38.075 TRACE 488676 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pane]
+2021-03-04 11:36:38.076 TRACE 488676 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [12]
+2021-03-04 11:36:38.221 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:36:42.066 DEBUG 488676 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-04 11:36:42.068 DEBUG 488676 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-04 11:36:42.257 DEBUG 488676 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-04 11:36:42.258 TRACE 488676 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [olio]
+2021-03-04 11:36:42.259 TRACE 488676 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [13]
+2021-03-04 11:36:43.300 DEBUG 488676 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:36:47.209 DEBUG 488676 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-04 11:36:47.210 DEBUG 488676 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-04 11:36:47.425 DEBUG 488676 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-04 11:36:47.427 TRACE 488676 --- [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [pizza]
+2021-03-04 11:36:47.427 TRACE 488676 --- [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [14]
+2021-03-04 11:36:47.826 DEBUG 488676 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:36:48.776 DEBUG 488676 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select prodotto0_.id as id1_1_0_, prodotto0_.nome as nome2_1_0_ from prodotto prodotto0_ where prodotto0_.id=?
+2021-03-04 11:36:48.777 TRACE 488676 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [13]
+2021-03-04 11:36:48.780 DEBUG 488676 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : delete from prodotto where id=?
+2021-03-04 11:36:48.781 TRACE 488676 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [13]
+2021-03-04 11:36:48.907 DEBUG 488676 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:36:50.081 DEBUG 488676 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select prodotto0_.id as id1_1_0_, prodotto0_.nome as nome2_1_0_ from prodotto prodotto0_ where prodotto0_.id=?
+2021-03-04 11:36:50.083 TRACE 488676 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [14]
+2021-03-04 11:36:50.089 DEBUG 488676 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : delete from prodotto where id=?
+2021-03-04 11:36:50.090 TRACE 488676 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [14]
+2021-03-04 11:36:50.201 DEBUG 488676 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:36:50.762 DEBUG 488676 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select prodotto0_.id as id1_1_0_, prodotto0_.nome as nome2_1_0_ from prodotto prodotto0_ where prodotto0_.id=?
+2021-03-04 11:36:50.762 TRACE 488676 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [12]
+2021-03-04 11:36:50.766 DEBUG 488676 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : delete from prodotto where id=?
+2021-03-04 11:36:50.767 TRACE 488676 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [12]
+2021-03-04 11:36:50.924 DEBUG 488676 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:37:42.545 DEBUG 488676 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:37:46.707 DEBUG 488676 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:38:02.402 DEBUG 488676 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:38:12.344 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-04 11:38:12.346 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-04 11:38:12.476 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-04 11:38:12.478 TRACE 488676 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [null]
+2021-03-04 11:38:12.479 TRACE 488676 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [15]
+2021-03-04 11:38:12.623 DEBUG 488676 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:38:21.025 DEBUG 488676 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select prodotto0_.id as id1_1_0_, prodotto0_.nome as nome2_1_0_ from prodotto prodotto0_ where prodotto0_.id=?
+2021-03-04 11:38:21.026 TRACE 488676 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [15]
+2021-03-04 11:38:21.078 DEBUG 488676 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : delete from prodotto where id=?
+2021-03-04 11:38:21.080 TRACE 488676 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [15]
+2021-03-04 11:38:21.312 DEBUG 488676 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:39:19.946 DEBUG 488676 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-03-04 11:39:20.026 DEBUG 488676 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-03-04 11:39:20.089 DEBUG 488676 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : insert into prodotto (nome, id) values (?, ?)
+2021-03-04 11:39:20.090 TRACE 488676 --- [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [evviva]
+2021-03-04 11:39:20.091 TRACE 488676 --- [http-nio-8080-exec-6] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [16]
+2021-03-04 11:39:20.236 DEBUG 488676 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
+2021-03-04 11:39:21.543 DEBUG 488676 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : delete from prodotto
+2021-03-04 11:39:21.760 DEBUG 488676 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select prodotto0_.id as id1_1_, prodotto0_.nome as nome2_1_ from prodotto prodotto0_
