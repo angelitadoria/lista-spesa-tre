@@ -19,11 +19,13 @@ export class AppComponent {
   }
 
   add(){
+    if (this.prodotto != ""){
     let dto: Dto = new Dto();
     dto.prodotto = this.prodotto;
     let oss: Observable<DtoLista> = this.http.post<DtoLista>('http://localhost:8080/add', dto);
     oss.subscribe(d => this.prodotti=d.prodotti);
     this.prodotto = "";
+    }
   }
 
   removeAll(){

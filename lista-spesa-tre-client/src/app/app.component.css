@@ -1,0 +1,105 @@
+body {
+    background-color: rgb(115, 233, 131);
+}
+
+h1 {
+    color: rgb(255, 166, 0);
+    text-align: center;
+    font-size: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: -1px 0 #003cff, 0 1px #002fff, 1px 0 #4c00ff, 0 -1px #4c00ff;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+div {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 8px;
+    align-content: center;
+    align-items: center;
+    background-color: rgb(114, 199, 139);
+    box-shadow: cornflowerblue;
+    border-style: solid;
+    padding: 8px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+.button1 {
+    background-color: #2b9b09;
+    /* Green */
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.button2 {
+    background-color: #ff0000;
+    /* Green */
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
+.button3 {
+    background-color: #ff0000;
+    /* Green */
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.button1:hover {
+    background-color: #ecf017;
+    /* Green */
+    color: rgb(0, 0, 0);
+}
+
+.button2:hover {
+    background-color: #ecf017;
+    /* Green */
+    color: rgb(0, 0, 0);
+}
+
+.button3:hover {
+    background-color: #ecf017;
+    /* Green */
+    color: rgb(0, 0, 0);
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+}
+
+input {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}

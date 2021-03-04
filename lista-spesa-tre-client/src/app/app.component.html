@@ -1,11 +1,14 @@
-Lista Della Spesa:
-<input type="text" [(ngModel)]="prodotto">
-<button (click)="add()">Aggiungi</button>
-<button (click)="removeAll()">Cancella Lista</button>
-<br>
-<ul>
-  <li *ngFor="let e of prodotti; index as i">
-    {{e.nome}}
-    <button (click)="remove(e.id)">X</button>
-  </li>
-</ul>
+<h1>Lista Della Spesa</h1>
+<div class="center">
+  <br>
+  <input type="text" [(ngModel)]="prodotto">
+  <button (click)="add()" class="button1">Aggiungi</button>
+  <button (click)="removeAll()" class="button2">Cancella Lista</button>
+  <br>
+  <ul>
+    <li *ngFor="let e of prodotti; index as i">
+      {{e.nome}}
+      <button (click)="remove(e.id)" class="button3">X</button>
+    </li>
+  </ul>
+</div>
