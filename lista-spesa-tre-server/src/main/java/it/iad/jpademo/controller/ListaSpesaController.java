@@ -25,15 +25,20 @@ public class ListaSpesaController {
         System.out.println("Aggiunto nuovo prodotto");
         Prodotto prodotto = new Prodotto(dtoProdotto.getProdotto());
         List<Prodotto> lista = listaSpesaService.add(prodotto);
-        lista.forEach(d -> System.out.println(d.toString()));
+        if (lista != null) {
+            lista.forEach(d -> System.out.println(d.toString()));
+        }
         return new DtoList(lista);
-
     }
 
     @RequestMapping("/removeAll")
-    public void removeAll() {
+    public DtoList removeAll() {
         System.out.println("Lista rimossa");
-        listaSpesaService.removeAll();
+        return new DtoList(listaSpesaService.removeAll());
     }
 
+    @RequestMapping("/displayList")
+    public DtoList displayList() {
+        return new DtoList(listaSpesaService.displayList());
+    }
 }

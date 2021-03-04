@@ -25,4 +25,8 @@ public class ListaSpesaServiceImpl implements ListaSpesaService {
         return listaRepository.findAll();
     }
 
+    @Override
+    public List<Prodotto> displayList() {
+        return listaRepository.findAll();
+    }
 }

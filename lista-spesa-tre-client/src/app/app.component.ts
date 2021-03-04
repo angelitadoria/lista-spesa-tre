@@ -14,7 +14,9 @@ export class AppComponent {
   prodotto: string;
   prodotti: Prodotto[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.displayList();
+  }
 
   add(){
     let dto: Dto = new Dto();
@@ -27,9 +29,10 @@ export class AppComponent {
   removeAll(){
     let oss: Observable<DtoLista> = this.http.get<DtoLista>('http://localhost:8080/removeAll');
     oss.subscribe(d => this.prodotti = d.prodotti);
-    for(var i = 0; i < this.prodotti.length; i++){ 
-      console.log(this.prodotti[i]);
-      this.prodotti.splice(i);
-    }
+  }
+
+  displayList(){
+    let oss: Observable<DtoLista> = this.http.get<DtoLista>('http://localhost:8080/displayList');
+    oss.subscribe(d => this.prodotti = d.prodotti);
   }
 }

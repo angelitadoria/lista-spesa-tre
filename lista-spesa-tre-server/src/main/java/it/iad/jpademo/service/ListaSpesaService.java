@@ -8,4 +8,6 @@ public interface ListaSpesaService {
     public List<Prodotto> add(Prodotto prodotto);
 
     public List<Prodotto> removeAll();
+    
+    public List<Prodotto> displayList();
 }
