@@ -11,7 +11,7 @@ import { Prodotto } from './prodotto';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  prodotto: string;
+  prodotto: Prodotto = new Prodotto();
   prodotti: Prodotto[] = [];
 
   constructor(private http: HttpClient) {
@@ -19,12 +19,12 @@ export class AppComponent {
   }
 
   add(){
-    if (this.prodotto != ""){
+    if (this.prodotto.nome != ""){
     let dto: Dto = new Dto();
     dto.prodotto = this.prodotto;
     let oss: Observable<DtoLista> = this.http.post<DtoLista>('http://localhost:8080/add', dto);
     oss.subscribe(d => this.prodotti=d.prodotti);
-    this.prodotto = "";
+    this.prodotto.nome = "";
     }
   }
 
@@ -38,9 +38,9 @@ export class AppComponent {
     oss.subscribe(d => this.prodotti = d.prodotti);
   }
 
-  remove(i: number){
+  remove(p: Prodotto){
     let dto: Dto = new Dto();
-    dto.id = i;
+    dto.prodotto = p;
     let oss: Observable<DtoLista> = this.http.post<DtoLista>('http://localhost:8080/remove', dto);
     oss.subscribe(d => this.prodotti=d.prodotti);
   }

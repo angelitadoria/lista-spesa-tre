@@ -1,4 +1,5 @@
+import { Prodotto } from "./prodotto";
+
 export class Dto{
-    prodotto: string;
-    id: number;
+    prodotto: Prodotto;
 }

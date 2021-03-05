@@ -23,7 +23,7 @@ public class ListaSpesaController {
     @ResponseBody
     public DtoList add(@RequestBody DtoProdotto dtoProdotto) {
         System.out.println("Aggiunto nuovo prodotto");
-        Prodotto prodotto = new Prodotto(dtoProdotto.getProdotto());
+        Prodotto prodotto = dtoProdotto.getProdotto();
         List<Prodotto> lista = listaSpesaService.add(prodotto);
         if (lista != null) {
             lista.forEach(d -> System.out.println(d.toString()));
@@ -46,6 +46,6 @@ public class ListaSpesaController {
     @ResponseBody
     public DtoList remove(@RequestBody DtoProdotto dtoProdotto) {
         System.out.println("Rimosso articolo");
-        return new DtoList(listaSpesaService.remove(dtoProdotto.getId()));
+        return new DtoList(listaSpesaService.remove(dtoProdotto.getProdotto().getId()));
     }
 }

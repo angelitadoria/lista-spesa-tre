@@ -1,12 +1,13 @@
 package it.iad.jpademo.model;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Prodotto {
+public class Prodotto implements Serializable{
 
     @Id
     @GeneratedValue
